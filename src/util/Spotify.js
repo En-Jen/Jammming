@@ -1,5 +1,5 @@
 const clientId = 'c3deb2f31242424783f0f651e83cf477';
-const redirectUri = 'http://localhost:3000/';
+const redirectUri = 'http://obtainable-haircut.surge.sh';
 let accessToken;
 
 export const Spotify = {
@@ -61,7 +61,7 @@ export const Spotify = {
         }).then(response => response.json()
         ).then(jsonResponse => {
             userId = jsonResponse.id;
-            
+
             return fetch(`https://api.spotify.com/v1/users/${userId}/playlists`, {
                 headers: headers,
                 method: 'POST',
